@@ -2,7 +2,7 @@
   "//1": "describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
-  "name": "my-glitch-app",
+  "name": "edfig",
   "version": "0.0.1",
   "description": "What am I about?",
   "main": "server.js",
@@ -10,9 +10,10 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.1",
-    "unix-timestamp": "^0.2.0",
-    "forwarded": "^0.1.2"
+    "express": "^4.16.2",
+    "forwarded": "^0.1.2",
+    "mongodb": "^2.2.33",
+    "unix-timestamp": "^0.2.0"
   },
   "engines": {
     "node": "8.x"
@@ -20,10 +21,12 @@
   "repository": {
     "url": "https://glitch.com/edit/#!/welcome-project"
   },
-  "license": "MIT",
+  "license": "UNLICENSED",
   "keywords": [
     "node",
     "glitch",
     "express"
-  ]
+  ],
+  "devDependencies": {},
+  "author": "edfig"
 }

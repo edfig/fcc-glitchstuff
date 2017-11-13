@@ -1,10 +1,7 @@
-This is where the readme used to say "Welcome to the Glitch BETA"
-But I changed it, to make it my own >:)
+Free Code Camp Stuff by edfig
 =========================
 
-This was a Free Code Camp assignnment
-
-It wasn't tough execute, but it's definitely tough to understand. I took my time on it, really trying to understand each piece. It became a steep learning curve, but it was worth it.
+This started out as my collection of Free Code Camp assignments.
 
 Hope this helps someone.
 
@@ -14,6 +11,11 @@ Hope this helps someone.
 
 Also, I made this using Glitch. That was fun. Find out more [about Glitch](https://glitch.com/about).
 
+Mongodb
+------------
+Start Mongodb with mongod --port 27017 --dbpath=./data --nojournal 
+
+(Do I really need to do this? How does it start automatically? Must learn.)
 
 Timestamp Microservice
 ------------
