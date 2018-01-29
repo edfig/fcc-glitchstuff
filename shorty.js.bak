@@ -1,7 +1,7 @@
 //mongodb uri mongodb://<dbuser>:<dbpassword>@ds259305.mlab.com:59305/edfigdb
 var mongodb = require('mongodb');
 var db = process.env.DB;
-var uri = 'mongodb://'+process.env.DBUSER+':'+process.env.DBPASS+'@'+process.env.DBHOST+':'+process.env.DBPORT+'/'+process.env.DB;
+var uri = 'mongodb://'+'dbadmin'+':'+process.env.DBPW+'@'+process.env.DBHOST+':'+process.env.DBPORT+'/'+db;
 //var uri = 'mongodb://'+process.env.DBUSER+':'+process.env.DBPASS+'@'+process.env.DBHOST+':'+process.env.DBPORT+'/'+process.env.DB;
 
 
@@ -47,6 +47,10 @@ module.exports = {
         }
       });
     });  
+    
+    //if the url exists, store it in the database and return an object that looks like this: { "original_url":"http://foo.com:80", "short_url":"https://little-url.herokuapp.com/8170" }
+    //createNew(entry);
+    //res.end(JSON.stringify(entry)); 
   },
   
   redirect: function(req, res) {
