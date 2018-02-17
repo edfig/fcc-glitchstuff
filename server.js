@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+
 var timestamp = require('unix-timestamp');
 var datestuff = require('./datestuff.js')
 var whoami = require('./whoami.js');
@@ -11,7 +12,22 @@ var imagesearch = require('./imagesearch');
 var uaparse = require('./uaparse');
 var mongodb = require('mongodb');
 
+var bodyParser = require('body-parser');
+var cors = require('cors');
+var multer = require('multer');
+var upload = multer({dest:'uploads/'});
+
 app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(cors());
+
+app.post('/upload', upload.single('file'), function(req, res, next) {
+  var filesize = JSON.stringify(req.file.size);
+  let obj = {'size':filesize};
+  //return filesize;
+  res.end(JSON.stringify(obj));
+});
+
 
 app.get("/api/whoami", whoami);
 app.get("/api/headers", headers);
